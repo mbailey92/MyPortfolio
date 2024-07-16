@@ -1,0 +1,34 @@
+/* FOOTER */
+
+footer {
+  text-align: center;
+  font-family: var(--mono);
+  padding: 4rem 0;
+}
+
+footer .name-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 4rem;
+  font-size: 3rem;
+}
+
+footer a {
+  color: var(--secondary);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--success);
+}

@@ -1,0 +1,38 @@
+/* CONTACT */
+
+.cont-bg {
+  background-color: var(--secondary);
+}
+
+#contact {
+  padding: 3rem 0;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: var(--secondary);
+  color: white;
+  font-family: var(--sans);
+}
+
+#contact h2 {
+  font-family: var(--mono);
+}
+
+#contact p:last-child {
+  margin-top: 3rem;
+}
+
+.button-contact {
+  background-color: var(--danger);
+  color: var(--white);
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: var(--mono);
+  transition: background-color 0.3s ease;
+}
+
+.button-contact:hover {
+  color: var(--white);
+  background-color: var(--warning);
+}

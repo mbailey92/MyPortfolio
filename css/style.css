@@ -1,0 +1,109 @@
+@import url(components/navbar.css);
+@import url(components/intro.css);
+@import url(components/contact.css);
+@import url(components/footer.css);
+@import url(components/projects.css);
+
+:root {
+  --white: #FFFFFF;
+  --primary: #a3105c;
+  --secondary: #D936A0;
+  --success: #F249D6;
+  --danger: #151740;
+  --warning: #0dbebe;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--danger);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  color: var(--warning);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--danger);
+  text-decoration: none;
+}
+
+.gradient {
+  background: linear-gradient(90deg, rgba(215,19,121,1) 0%, rgba(24,217,217,1) 100%);
+  height: 2px;
+}
+
+img {
+  width: 100%;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 550px){
+  article {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: 1rem;
+  }
+  #projects {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  #projects img {
+    grid-column: 1/12;
+    grid-row: 1/2;
+  }
+  .text {
+    grid-row: 1/2;
+    grid-column: 11/20;
+    order: 2;
+    text-align: right;
+  }
+  #projects ul {
+    justify-content: flex-end;
+  }
+  #projects .reverse .text {
+    grid-row: 1/2;
+    grid-column: 1/10;
+    order: 2;
+    text-align: left;
+  }
+  #projects .reverse img {
+    grid-column: 9/20;
+    grid-row: 1/2;
+  }
+  #projects .reverse ul {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 850px){
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
